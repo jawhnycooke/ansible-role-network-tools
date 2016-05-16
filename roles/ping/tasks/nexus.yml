@@ -1,11 +1,11 @@
 ---
 - nxos_command:
     commands: "{{ lookup('file', 'nxos.txt') }}"
-    #commands: "{{ item }}"
     host: "{{ inventory_hostname }}"
     transport: cli
     use_ssl: false
     username: "{{ ansible_ssh_user }}"
-    #waitfor: "result[0] contains ' 0.00'"
-  #with_items: "{{ PING_TEST_NX }}"
+    roles/ping/tasks/nexus.yml
+    waitfor: "result[0] contains ' 0.00'"
+  with_items: "{{ PING_TEST_NX }}"
   ignore_errors: yes
