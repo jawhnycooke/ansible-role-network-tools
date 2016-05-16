@@ -1,0 +1,13 @@
+---
+
+- ios_command:
+    commands: "{{ item }}"
+    host: "{{ inventory_hostname }}"
+    # The env var ANSIBLE_NET_PASSWORD and ANSIBLE_NET_USERNAME did not work
+    # this variables can remove teh need to especify password with cli
+    provider: "{{ cli }}"
+    #After version 2.2 contains can be negated, update the waitfor.
+    waitfor: "result[0] contains 'Success rate is 100 percent'"
+  with_items: "{{ PING_TEST_IOS }}"
+  ignore_errors: yes
+  
