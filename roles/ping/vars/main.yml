@@ -11,7 +11,6 @@ GW_SUBNETS:
  - 10.3.100.1
  - 10.3.50.1
  - 10.3.70.1
- - 10.2.201.1
  - 10.1.4.1
  - 10.4.50.1
  - 10.4.70.1
@@ -39,7 +38,6 @@ PING_TEST_NX:
  - ping 10.3.100.1 count 2
  - ping 10.3.50.1 count 2
  - ping 10.3.70.1 count 2
- - ping 10.2.201.1 count 2
  - ping 10.1.4.1 count 2
  - ping 10.4.50.1 count 2
  - ping 10.4.70.1 count 2
@@ -67,7 +65,6 @@ PING_TEST_IOS:
  - ping 10.3.100.1 repeat 2
  - ping 10.3.50.1 repeat 2
  - ping 10.3.70.1 repeat 2
- - ping 10.2.201.1 repeat 2
  - ping 10.1.4.1 repeat 2
  - ping 10.4.50.1 repeat 2
  - ping 10.4.70.1 repeat 2
