@@ -1,4 +1,2 @@
 ---
-cli:
-  host: "{{ inventory_hostname }}"
-  transport: cli
+device_os: nexus
