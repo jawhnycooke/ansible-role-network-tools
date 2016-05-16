@@ -4,8 +4,9 @@
     host: "{{ inventory_hostname }}"
     transport: cli
     use_ssl: false
-    username: ansible
+    username: "{{ ansible_ssh_user }}"
     #After version 2.2 contains can be negated, update the waitfor.
     waitfor: "result[0] contains ' 0.00'"
+    retries: 2
   with_items: "{{ PING_TEST_NX }}"
   ignore_errors: yes

@@ -8,6 +8,6 @@
     provider: "{{ cli }}"
     #After version 2.2 contains can be negated, update the waitfor.
     waitfor: "result[0] contains 'Success rate is 100 percent'"
+    retries: 2
   with_items: "{{ PING_TEST_IOS }}"
   ignore_errors: yes
-  
