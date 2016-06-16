@@ -21,7 +21,7 @@ This position is declared with the var ```device_position``` in the inventory fi
 ####To-Do:
 
 So far the implementation of **ios_template** does not cover replacing for exact match of the string for example:
-If the box is configured like this:
+If the device is configured like this:
 
 ``` 
 ip access-list extended Test
