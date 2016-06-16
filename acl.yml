@@ -1,0 +1,8 @@
+---
+- name: Configuring ACL
+  hosts: "{{ devices | default('all') }}"
+  gather_facts: no
+  connection: local
+
+  roles:
+    - { role: acl }
