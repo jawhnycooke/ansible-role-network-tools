@@ -1,0 +1,8 @@
+---
+- name: Configuring Policy-Map
+  hosts: "{{ devices | default('all') }}"
+  gather_facts: no
+  connection: local
+
+  roles:
+    - { role: policy_map }

@@ -1,0 +1,5 @@
+---
+- name: Policy-Map to {{ device_position }}
+  ios_template:
+    host: "{{ inventory_hostname }}"
+    src: wan_edge_qos_policy_map.txt
