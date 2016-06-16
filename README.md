@@ -13,8 +13,13 @@ So far the device_position are:
  - dc_core
 
 This position is declared with the var ```device_position``` in the inventory file.
+#### IMPORTANT
+
+- The username and password are defined as envar ```ANSIBLE_NET_USERNAME``` and ```ANSIBLE_NET_PASSWORD```.
+- For QoS: The logic here is that depdending on the role, the main task is going to look for var ```device_position```.yml, is going to use include to excecute the task in that file and then this one is going to copy a correct template. 
 
 ####To-Do:
+
 So far the implementation of **ios_template** does not cover replacing for exact match of the string for example:
 If the box is configured like this:
 
