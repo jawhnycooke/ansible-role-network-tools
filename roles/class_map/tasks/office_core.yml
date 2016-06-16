@@ -1,0 +1,4 @@
+---
+- ios_template:
+    host: "{{ inventory_hostname }}"
+    src: office_core_qos_class_map.txt

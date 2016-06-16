@@ -1,0 +1,4 @@
+---
+- ios_template:
+    host: "{{ inventory_hostname }}"
+    src: wan_edge_qos_class_map.txt

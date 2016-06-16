@@ -1,0 +1,8 @@
+---
+- name: Configuring Class-Map
+  hosts: "{{ devices | default('all') }}"
+  gather_facts: no
+  connection: local
+
+  roles:
+    - { role: class_map }
