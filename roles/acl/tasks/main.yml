@@ -1,0 +1,9 @@
+---
+- name: "Applying ACL to devices"
+  include: "{{ acl_outer_item }}"
+  with_first_found:
+    - files: "{{ device_position }}.yml"
+      skip: true
+      paths: tasks
+  loop_control:
+    loop_var: acl_outer_item

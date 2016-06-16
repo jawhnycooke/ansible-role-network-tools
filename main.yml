@@ -1,0 +1,19 @@
+---
+- nxos_command:
+    commands: "{{ item }}"
+    host: "{{ inventory_hostname }}"
+    transport: cli
+    use_ssl: false
+    username: ansible
+    #waitfor: "stdout_lines[0][6] contains '100.00'"
+  with_items:
+    - ping 10.1.60.2 count 2
+    - ping 10.1.70.2 count 2
+    - ping 1.1.1.1 count 2
+  register: my_out
+
+- debug:
+   msg: 'The command failed'
+   verbosity: 4
+  with_items: '{{ my_out.results }}'
+  when: item.stdout_lines[0][6] | search('100.00')

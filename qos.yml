@@ -1,0 +1,10 @@
+---
+- name: Configuring QoS
+  hosts: "{{ devices | default('all') }}"
+  gather_facts: no
+  connection: local
+
+  roles:
+    - { role: acl }
+    - { role: class_map}
+    - { role: policy_map}

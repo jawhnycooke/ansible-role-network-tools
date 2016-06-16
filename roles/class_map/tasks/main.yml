@@ -1,0 +1,9 @@
+---
+- name: "Applying config to devices"
+  include: "{{ class_map_outer_item }}"
+  with_first_found:
+    - files: "{{ device_position }}.yml"
+      skip: true
+      paths: tasks
+  loop_control:
+    loop_var: class_map_outer_item
